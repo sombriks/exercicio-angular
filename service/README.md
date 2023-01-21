@@ -16,4 +16,7 @@ npm install
 npm run test:coverage
 ```
 
-Por padrão irá executar o serviço no modo de desenvolvimento
+## Aspectos do estudo
+
+- Uso dos componentes do primeng
+- Criação ajuses dos casos de teste para cumprir os casos-base
