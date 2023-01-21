@@ -1,5 +1,23 @@
 # Front
 
+Projeto frontend feito em angular js
+
+## Como executar
+
+```bash
+npm install
+npm start
+```
+
+## Como testar
+
+```bash
+npm install
+npm run test:coverage
+```
+
+## Angular cli output
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
 ## Development server

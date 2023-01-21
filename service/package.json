@@ -1,16 +1,33 @@
 {
+  "type": "module",
   "name": "service",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "sample service",
-  "main": "index.js",
+  "main": "app/index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "test": "mocha app",
+    "test:coverage": "c8 mocha app",
+    "migrate:new": "knex migrate:make -x mjs --knexfile app/db/knexfile.cjs -- ",
+    "migrate:latest": "knex migrate:latest --knexfile app/db/knexfile.cjs",
+    "migrate:rollback": "knex migrate:rollback --knexfile app/db/knexfile.cjs"
   },
   "keywords": [],
-  "author": "",
+  "author": "Leonardo Silveira <sombriks@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "dotenv-flow": "^3.2.0",
+    "better-sqlite3": "^8.0.1",
     "knex": "^2.4.1",
-    "koa": "^2.14.1"
+    "koa": "^2.14.1",
+    "koa-jwt": "^4.0.4",
+    "@koa/router": "^12.0.0"
+  },
+  "devDependencies": {
+    "c8": "^7.12.0",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.20"
   }
 }
