@@ -48,7 +48,19 @@ implemente o comportamento esperado pelo sistema.
 - A bateria de testes deve cobrir o 'happy path' das funcionalidades presentes
   no sistema
 
+### Melhorias da camada de serviço
+
+- Evoluir o banco de dados utilizando as migrações do knex
+- Implementar autenticação com JWT
+- Configurar diferentes perfis de trabalho com variáveis de ambiente
+  - Uso do [dotenv-flow](https://npmjs.com/package/dotenv-flow) no service
+  - Uso do [@ngx-env/builder](https://www.npmjs.com/package/@ngx-env/builder) no front
+
 ## Detalhes adicionais 
 
 Cada módulo do projeto (front/service) possui um README.md próprio com mais
 informações específicas pertinentes ao estudo. 
+
+- Ver documentação do [front](front/README.md)
+- Ver documentação do [service](service/README.md)
+- 
