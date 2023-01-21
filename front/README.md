@@ -16,14 +16,35 @@ npm install
 npm run test:coverage
 ```
 
+## Apelidos para o angular cli
+
+Caso não esteja instalado a nível global, o angular cli (ng) está disponível
+tanto via npx quando nos scripts npm.
+
+Exemplo npx:
+
+```bash
+npx ng generate component pages/login
+```
+
+Exemplo script npm:
+
+```bash
+npm run ng generate service shared/api
+```
+
 ## Aspectos do estudo
 
 - Uso dos componentes do primeng
 - Criação e ajustes dos casos de teste para cumprir os casos-base
+- Compreensão do uso de variáveis de ambiente
+- Consumo de api REST
 
 <hr/>
+<hr/>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
+version 15.1.2.
 
 ## Development server
 

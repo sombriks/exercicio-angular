@@ -11,7 +11,7 @@ Pequeno estudo de caso de Angular para interfaces ricas
 - backend/serviço com api REST escrito em [koa](https://koajs.com/)
   - acesso a banco de dados com [knex](https://knexjs.org/)
 - frontend moderno escrito em [angular](https://angular.io/)
-  - componentes de interface do [primeng](https://www.primefaces.org/primeng/) 
+  - componentes de interface do [primeng](https://www.primefaces.org/primeng/)
 
 ## Aplicação de exemplo
 
@@ -54,13 +54,12 @@ implemente o comportamento esperado pelo sistema.
 - Implementar autenticação com JWT
 - Configurar diferentes perfis de trabalho com variáveis de ambiente
   - Uso do [dotenv-flow](https://npmjs.com/package/dotenv-flow) no service
-  - Uso do [@ngx-env/builder](https://www.npmjs.com/package/@ngx-env/builder) no front
+  - Uso do [environments](https://angular.io/guide/build#configuring-application-environments) no front
 
-## Detalhes adicionais 
+## Detalhes adicionais
 
-Cada módulo do projeto (front/service) possui um README.md próprio com mais
-informações específicas pertinentes ao estudo. 
+Cada módulo do projeto (front/service) possui um `README.md` próprio com mais
+informações específicas pertinentes ao estudo.
 
 - Ver documentação do [front](front/README.md)
 - Ver documentação do [service](service/README.md)
-- 
