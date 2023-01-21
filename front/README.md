@@ -19,9 +19,9 @@ npm run test:coverage
 ## Aspectos do estudo
 
 - Uso dos componentes do primeng
-- Criação ajuses dos casos de teste para cumprir os casos-base
+- Criação e ajustes dos casos de teste para cumprir os casos-base
 
-## Angular cli output
+<hr/>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
