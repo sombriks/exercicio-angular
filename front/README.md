@@ -6,7 +6,6 @@ Projeto frontend feito em angular js
 
 ```bash
 npm install
-npm run configure
 npm start
 ```
 
@@ -14,7 +13,6 @@ npm start
 
 ```bash
 npm install
-npm run configure
 npm run test:coverage
 ```
 
