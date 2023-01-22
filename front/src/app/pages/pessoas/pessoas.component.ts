@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-pessoas',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./pessoas.component.scss']
 })
 export class PessoasComponent {
+
+  constructor(
+    private router: Router,
+  ){}
 
 }

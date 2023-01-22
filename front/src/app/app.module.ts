@@ -8,6 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { PessoasComponent } from './pages/pessoas/pessoas.component';
 import { SetoresComponent } from './pages/setores/setores.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import {TabMenuModule} from "primeng/tabmenu";
 
 @NgModule({
   declarations: [
@@ -17,11 +18,12 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     SetoresComponent,
     SidebarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        TabMenuModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

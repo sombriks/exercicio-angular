@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-setores',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./setores.component.scss']
 })
 export class SetoresComponent {
+
+  constructor(
+    private router: Router,
+  ){}
 
 }
