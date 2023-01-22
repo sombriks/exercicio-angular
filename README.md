@@ -48,11 +48,9 @@ implemente o comportamento esperado pelo sistema.
 - A bateria de testes deve cobrir o 'happy path' das funcionalidades presentes
   no sistema
 
-### Melhorias da camada de serviço
+### Ajustes gerais
 
-- Evoluir o banco de dados utilizando as migrações do knex
-- Implementar autenticação com JWT
-- Configurar diferentes perfis de trabalho com variáveis de ambiente
+- Configurar diferentes perfis de trabalho usando variáveis de ambiente
   - Uso do [dotenv-flow](https://npmjs.com/package/dotenv-flow) no service
   - Uso do [environments](https://angular.io/guide/build#configuring-application-environments) no front
 

@@ -16,6 +16,7 @@ npm install
 npm run test:coverage
 ```
 
-## Aspectos do estudo
+## Melhorias da camada de serviço
 
-N/A
+- Evoluir o banco de dados utilizando as migrações do knex
+- Implementar autenticação com JWT

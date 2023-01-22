@@ -3,14 +3,15 @@
   "name": "service",
   "version": "0.1.0",
   "description": "sample service",
-  "main": "app/index.mjs",
+  "main": "index.mjs",
   "scripts": {
-    "dev": "nodemon",
-    "test": "mocha app",
-    "test:coverage": "c8 mocha app",
-    "migrate:new": "knex migrate:make -x mjs --knexfile app/db/knexfile.cjs -- ",
-    "migrate:latest": "knex migrate:latest --knexfile app/db/knexfile.cjs",
-    "migrate:rollback": "knex migrate:rollback --knexfile app/db/knexfile.cjs"
+    "start": "node  -r dotenv-flow/config index.mjs",
+    "dev": "nodemon -r dotenv-flow/config ",
+    "test": "mocha  -r dotenv-flow/config app",
+    "test:coverage": "c8 mocha  -r dotenv-flow/config app",
+    "migrate:make": "knex migrate:make --knexfile knexfile.cjs -x mjs -- ",
+    "migrate:latest": "knex migrate:latest --knexfile knexfile.cjs",
+    "migrate:rollback": "knex migrate:rollback --knexfile knexfile.cjs"
   },
   "keywords": [],
   "author": "Leonardo Silveira <sombriks@gmail.com>",

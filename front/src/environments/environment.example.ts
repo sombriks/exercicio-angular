@@ -1,6 +1,5 @@
 export const environment = {
-  production: true,
-  testing: false,
-  jwtSecret: "",
-  apiUrl: ""
+  env: "development",
+  jwtSecret: "s3c3t-dev",
+  apiUrl: "http://localhost:3000/",
 };
