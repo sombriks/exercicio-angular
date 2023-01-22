@@ -1,9 +1,13 @@
 // Update with your config settings.
-const sqlite = {
+const basic = {
     client: 'better-sqlite3',
     useNullAsDefault: true,
     connection: {
         filename: './dev.sqlite3',
+    },
+    pool: {
+        min: 2,
+        max: 10
     },
     migrations: {
         loadExtensions: [".mjs"],
@@ -13,27 +17,16 @@ const sqlite = {
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 module.exports = {
-    development: {...sqlite},
+    development: {...basic},
     test: {
-        ...sqlite,
+        ...basic,
         connection: {
             filename: ':memory:',
         }
     },
     production: {
+        ...basic,
         client: 'postgresql',
-        connection: {
-            database: 'my_db',
-            user: 'username',
-            password: 'password'
-        },
-        pool: {
-            min: 2,
-            max: 10
-        },
-        migrations: {
-            loadExtensions: [".mjs"],
-            tableName: 'knex_migrations'
-        }
+        connection: process.env.PG_CONNECTION_URL
     }
 };

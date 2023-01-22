@@ -39,9 +39,9 @@ export const up = async (knex) => {
         .createTable("lotacoes", tb => {
             tb.integer("pessoas_id").notNullable()
                 .references("pessoas.id").onDelete("cascade");
-            tb.integer("varas_id").notNullable()
-                .references("varas.id").onDelete("cascade");
-            tb.primary(["pessoas_id", "varas_id"]);
+            tb.integer("gabinetes_id").notNullable()
+                .references("gabinetes.id").onDelete("cascade");
+            tb.primary(["pessoas_id", "gabinetes_id"]);
             tb.timestamps(true, true);
         })
 
