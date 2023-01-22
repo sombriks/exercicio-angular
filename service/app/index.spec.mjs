@@ -13,7 +13,7 @@ describe("Teste base de API", () => {
     after(async () => await database.destroy())
 
     it("Deveria estar em modo de teste", done => {
-        if(!process.env.NODE_ENV) return done(new Error("NODE_ENV vazio"));
+        if (!process.env.NODE_ENV) return done(new Error("NODE_ENV vazio"));
         process.env.NODE_ENV.should.be.eql("test");
         done();
     })
@@ -50,6 +50,56 @@ describe("Teste base de API", () => {
                 if (err) return done(err);
                 res.should.have.status(200);
                 res.body.should.be.an('Array');
+                done();
+            });
+    });
+
+    it("deveria recuperar uma pessoa", done => {
+        chai
+            .request(app.callback())
+            .get('/pessoas/1')
+            .end((err, res) => {
+                if (err) return done(err);
+                res.should.have.status(200);
+                res.body.should.be.an('Object');
+                done();
+            });
+    });
+
+    it("deveria inserir uma pessoa", done => {
+        chai
+            .request(app.callback())
+            .post('/pessoas')
+            .send({nome: "Evangelista", senha: "", perfis_id: 2})
+            .end((err, res) => {
+                if (err) return done(err);
+                res.should.have.status(200);
+                res.body.should.be.an('Array');
+                done();
+            });
+    });
+
+    it("deveria atualizar uma pessoa", done => {
+        chai
+            .request(app.callback())
+            .put('/pessoas/1')
+            .send({nome: "Judas", senha: "", perfis_id: 1})
+            .end((err, res) => {
+                if (err) return done(err);
+                res.should.have.status(200);
+                res.body.should.be.an('number');
+                done();
+            });
+    });
+
+    it("deveria excluir uma pessoa", done => {
+        chai
+            .request(app.callback())
+            .del('/pessoas/6')
+            .end((err, res) => {
+                if (err) return done(err);
+                res.should.have.status(200);
+                res.body.should.be.an('number');
                 done();
             });
     });

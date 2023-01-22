@@ -23,6 +23,7 @@
     "dotenv-flow": "^3.2.0",
     "knex": "^2.4.1",
     "koa": "^2.14.1",
+    "koa-bodyparser": "^4.3.0",
     "koa-jwt": "^4.0.4"
   },
   "devDependencies": {
