@@ -8,7 +8,6 @@
     "configure:production": "cross-env NODE_ENV=production node -r dotenv-flow/config set-env.mjs",
     "prestart": "npm run configure",
     "start": "ng serve",
-    "dev": "npm start",
     "prebuild": "npm run configure:production",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",

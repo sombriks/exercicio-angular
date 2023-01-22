@@ -1,1 +1,19 @@
-<p>pessoas works!</p>
+<app-searchbox (onSearch)="busca($event)"></app-searchbox>
+<p-table [value]="pessoas">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-p>
+    <tr>
+      <td>{{p.id}}</td>
+      <td>{{p.nome}}</td>
+      <td>
+        <p-splitButton icon="pi pi-pencil" [model]="[]" styleClass="p-button-text p-button-sm"></p-splitButton>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

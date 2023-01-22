@@ -1,1 +1,19 @@
-<p>setores works!</p>
+<app-searchbox></app-searchbox>
+<p-table [value]="setores">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-s>
+    <tr>
+      <td>{{s.id}}</td>
+      <td>{{s.nome}}</td>
+      <td>
+        <p-splitButton icon="pi pi-pencil" [model]="[]" styleClass="p-button-text p-button-sm"></p-splitButton>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

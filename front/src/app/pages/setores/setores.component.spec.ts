@@ -1,6 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SetoresComponent } from './setores.component';
+import {RouterTestingModule} from "@angular/router/testing";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {SearchboxComponent} from "../../shared/searchbox/searchbox.component";
+import {TableModule} from "primeng/table";
+import {InputTextModule} from "primeng/inputtext";
+import {FormsModule} from "@angular/forms";
 
 describe('SetoresComponent', () => {
   let component: SetoresComponent;
@@ -8,7 +14,14 @@ describe('SetoresComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SetoresComponent ]
+      imports:[
+        HttpClientTestingModule,
+        RouterTestingModule,
+        TableModule,
+        InputTextModule,
+        FormsModule
+      ],
+      declarations: [ SetoresComponent, SearchboxComponent ]
     })
     .compileComponents();
 

@@ -1,0 +1,16 @@
+<div class="box">
+  <div class="grow">
+    <span class="p-float-label">
+        <input id="float-input" style="width: 100%;" type="text" pInputText [(ngModel)]="text" (keyup)="doSearch()"/>
+        <label for="float-input">Buscar</label>
+    </span>
+  </div>
+  <div>
+    <!-- prev/next page -->
+    <span class="p-buttonset">
+      <button pButton pRipple class="p-button-text" icon="pi pi-search" (click)="doSearch()"></button>
+      <button pButton pRipple class="p-button-text" icon="pi pi-chevron-left"></button>
+      <button pButton pRipple class="p-button-text" icon="pi pi-chevron-right"></button>
+    </span>
+  </div>
+</div>

@@ -9,20 +9,19 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class AppComponent {
 
-  items: MenuItem[];
+  items: MenuItem[] = [
+    {label: 'Pessoas', icon: 'pi pi-fw pi-user', routerLink: ["pessoas"]},
+    {label: 'Setores', icon: 'pi pi-fw pi-building', routerLink: ["setores"]},
+  ];
+
   activeItem: MenuItem;
 
-  constructor(
-    private router: Router) {
-    this.items = [
-      {label: 'Pessoas', icon: 'pi pi-fw pi-user', routerLink: ["pessoas"]},
-      {label: 'Setores', icon: 'pi pi-fw pi-building', routerLink: ["setores"]},
-    ];
+  constructor(private router: Router) {
     this.activeItem = this.items[0];
   }
 
   async setActive(item: any) {
     this.activeItem = item;
-    await this.router.navigate(item.route);
+    await this.router.navigate(item.routerLink);
   }
 }

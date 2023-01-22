@@ -1,6 +1,12 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { PessoasComponent } from './pessoas.component';
+import {PessoasComponent} from './pessoas.component';
+import {RouterTestingModule} from "@angular/router/testing";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {SearchboxComponent} from "../../shared/searchbox/searchbox.component";
+import {TableModule} from "primeng/table";
+import {InputTextModule} from "primeng/inputtext";
+import {FormsModule} from "@angular/forms";
 
 describe('PessoasComponent', () => {
   let component: PessoasComponent;
@@ -8,9 +14,16 @@ describe('PessoasComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PessoasComponent ]
+      imports: [
+        HttpClientTestingModule,
+        RouterTestingModule,
+        TableModule,
+        InputTextModule,
+        FormsModule
+      ],
+      declarations: [PessoasComponent, SearchboxComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(PessoasComponent);
     component = fixture.componentInstance;

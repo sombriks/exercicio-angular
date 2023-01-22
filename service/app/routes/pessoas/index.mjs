@@ -2,7 +2,7 @@ import Router from "@koa/router"
 
 import {database} from "../../configs/database.mjs";
 
-export const listPessoas = () => database("perfis").select()
+export const listPessoas = () => database("pessoas").select()
 
 export const pessoaRouter = new Router()
 

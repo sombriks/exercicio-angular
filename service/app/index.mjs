@@ -1,4 +1,5 @@
 import Koa from "koa";
+import cors from "@koa/cors"
 import Router from "@koa/router";
 
 import {authRouter} from "./routes/auth/index.mjs";
@@ -7,6 +8,8 @@ import {pessoaRouter} from "./routes/pessoas/index.mjs";
 import {setorRouter} from "./routes/setores/index.mjs";
 
 export const app = new Koa();
+
+app.use(cors());
 
 app.use(authRouter.routes()).use(authRouter.allowedMethods());
 app.use(perfilRouter.routes()).use(perfilRouter.allowedMethods());

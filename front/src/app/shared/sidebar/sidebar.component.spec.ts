@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidebarComponent } from './sidebar.component';
+import {SidebarModule} from "primeng/sidebar";
 
 describe('SidebarComponent', () => {
   let component: SidebarComponent;
@@ -8,6 +9,9 @@ describe('SidebarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[
+        SidebarModule,
+      ],
       declarations: [ SidebarComponent ]
     })
     .compileComponents();
