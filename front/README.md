@@ -33,12 +33,12 @@ Exemplo script npm:
 npm run ng generate service shared/api
 ```
 
-## Aspectos do estudo
+## Aspectos avaliados no estudo
 
 - Uso dos componentes do primeng
-- Criação e ajustes dos casos de teste para cumprir os casos-base
-- Compreensão do uso de variáveis de ambiente
-- Consumo de api REST
+- Criação e ajustes dos casos de teste para cobrir os casos-base
+- Compreensão do uso de variáveis de ambiente e do `environment.ts`
+- Consumo da api REST
 
 <hr/>
 <hr/>

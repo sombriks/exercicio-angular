@@ -9,7 +9,7 @@ Pequeno estudo de caso de Angular para interfaces ricas
 ## Tecnologias estudadas
 
 - backend/serviço com api REST escrito em [koa](https://koajs.com/)
-  - acesso a banco de dados com [knex](https://knexjs.org/)
+  - acesso e gerenciamento de banco de dados com [knex](https://knexjs.org/)
 - frontend moderno escrito em [angular](https://angular.io/)
   - componentes de interface do [primeng](https://www.primefaces.org/primeng/)
 
@@ -26,33 +26,63 @@ Módulo de cadastros básicos de sistema jurídico
 
 ## Aspectos a serem estudados
 
-O estudo consiste em tomar decisões de ‘design’ pra produzir a ‘interface’ que
-implemente o comportamento esperado pelo sistema.
+O estudo consiste em tomar decisões de design para produzir uma interface que
+implemente o comportamento esperado pela descrição de sistema acima.
 
-### Lotações
+### Cadastro e listagem de pessoas
+
+- Criar dialog de criação e edição de pessoas
+- Implementar exclusão de pessoas
+
+### Cadastro e listagem de setores
+
+- Criar dialog de criaão e edição de setores
+- Completar o filtro da listagem
+- Implementar exclusão de setores
+- Criar chamadas de serviço apropriadas
+
+### Cadastro e listagem de varas
+
+- Criar listagem de varas
+- Criar filtro por setores
+- Criar dialog de criaão e edição de varas
+- Implementar exclusão de varas
+- Criar chamadas de serviço apropriadas
+
+### Cadastro e listagem de gabinetes
+
+- Criar listagem de varas
+- Criar filtro por varas
+- Criar dialog de criaão e edição de varas
+- Implementar exclusão de gabinetes
+- Criar chamadas de serviço apropriadas
+
+### Cadastro e listagem de lotações
 
 - Criar tela de listagem de lotações
 - Permitir criar, alterar ou remover lotações
-- Definir estratégia de componentização da nova funcionalidade
+- Criar chamadas de serviço apropriadas
 
 ### Uso dos componentes do primeng
 
-- Quais componentes serão usados pra montar a tela
-
-### Correção de defeitos existentes
-
-- Garantir que a tela de gabinetes está listando, filtrando e paginando certo
+- Quais componentes serão usados pra montar as telas
 
 ### Testes unitários
 
 - A bateria de testes deve cobrir o 'happy path' das funcionalidades presentes
   no sistema
 
-### Ajustes gerais
+### Configuração de ambiente
 
-- Configurar diferentes perfis de trabalho usando variáveis de ambiente
+- Melhorar a configuração de variáveis de ambiente
   - Uso do [dotenv-flow](https://npmjs.com/package/dotenv-flow) no service
   - Uso do [environments](https://angular.io/guide/build#configuring-application-environments) no front
+- Ajustes para evitar versionamento de senhas e outros dados sensíveis (apontar estratégia)
+- Ajustes na gestão e configuração do `environments.ts` do angular
+
+### Segurança
+
+- Implementar autenticação JWT
 
 ## Detalhes adicionais
 
